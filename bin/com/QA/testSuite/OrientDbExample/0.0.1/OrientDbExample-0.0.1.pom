@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+   
+ 
+  <artifactId>OrientDbExample</artifactId>
+  <packaging>jar</packaging>
+
+  <name>OrientDbExample</name>
+  <url>http://maven.apache.org</url>
+	
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+  <plugins>
+	<plugin>
+	    <groupId>org.flywaydb</groupId>
+	    <artifactId>flyway-maven-plugin</artifactId>
+	    <version>3.2.1</version>
+	    <configuration>
+	    	<url>jdbc:mysql://localhost:3306</url>
+	        <user>root</user>
+	        <password></password>
+	        <schemas>
+	            <schema>minion</schema>
+	        </schemas>
+	    </configuration>
+	</plugin>
+	</plugins>
+</build>
+  <dependencies>
+	<dependency>
+		<groupId>com.orientechnologies</groupId>
+		<artifactId>orientdb-core</artifactId>
+		<version>2.0.10</version>
+	</dependency>
+	<dependency>
+		<groupId>com.orientechnologies</groupId>
+		<artifactId>orient-commons</artifactId>
+		<version>2.0-M1</version>
+	</dependency>
+	<dependency>
+		<groupId>com.orientechnologies</groupId>
+		<artifactId>orientdb-graphdb</artifactId>
+		<version>2.0.10</version>
+	</dependency>
+	<dependency>
+		<groupId>com.tinkerpop.blueprints</groupId>
+		<artifactId>blueprints-core</artifactId>
+		<version>2.6.0</version>
+	</dependency>
+	<dependency>
+		<groupId>com.tinkerpop.gremlin</groupId>
+		<artifactId>gremlin-java</artifactId>
+		<version>2.6.0</version>
+	</dependency>
+	<dependency>
+  		<groupId>com.tinkerpop</groupId>
+	  	<artifactId>pipes</artifactId>
+	  	<version>2.6.0</version>
+	</dependency>
+	
+  	<dependency>
+		<groupId>com.github.detro.ghostdriver</groupId>
+  		<artifactId>phantomjsdriver</artifactId>
+	  	<version>1.0.4</version>
+  	</dependency>
+    <dependency>
+        <groupId>org.javassist</groupId>
+        <artifactId>javassist</artifactId>
+        <version>3.18.0-GA</version>
+    </dependency>	
+
+  </dependencies>
+
+  <groupId>com.QA.testSuite</groupId>
+  <version>0.0.1</version>
+</project>
